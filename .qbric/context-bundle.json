@@ -1,0 +1,37 @@
+{
+  "version" : 1,
+  "generated_at" : "2026-07-20T18:20:14.843870894Z",
+  "total_files" : 5,
+  "total_bytes" : 2947,
+  "files" : [ {
+    "path" : "src/test/java/stepdefinitions/LoginSteps.java",
+    "size_bytes" : 590,
+    "sha1" : "7ea738db1d7403557bc9ed38f68aaa3e8bdbca83",
+    "content" : "\npackage stepdefinitions;\n\nimport io.cucumber.java.en.*;\nimport pages.LoginPage;\nimport utils.DriverManager;\n\npublic class LoginSteps {\n\n    LoginPage login = new LoginPage(DriverManager.getDriver());\n\n    @Given(\"user is on login page\")\n    public void openLogin(){\n        DriverManager.getDriver().get(\"https://the-internet.herokuapp.com/login\");\n    }\n\n    @When(\"user logs in\")\n    public void login(){\n        login.login(\"tomsmith\",\"SuperSecretPassword!\");\n    }\n\n    @Then(\"user should login successfully\")\n    public void verify(){\n        System.out.println(\"Logged in\");\n    }\n}\n",
+    "truncated" : false
+  }, {
+    "path" : "src/test/java/pages/BasePage.java",
+    "size_bytes" : 190,
+    "sha1" : "0204f9050a46b86648200e496c417f734f640952",
+    "content" : "\npackage pages;\n\nimport org.openqa.selenium.WebDriver;\n\npublic class BasePage {\n    protected WebDriver driver;\n\n    public BasePage(WebDriver driver){\n        this.driver = driver;\n    }\n}\n",
+    "truncated" : false
+  }, {
+    "path" : "src/test/java/pages/LoginPage.java",
+    "size_bytes" : 518,
+    "sha1" : "6008a3d834d9c07814305e9ad2174bec482d35ab",
+    "content" : "\npackage pages;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.WebDriver;\n\npublic class LoginPage extends BasePage {\n\n    By username = By.id(\"username\");\n    By password = By.id(\"password\");\n    By loginBtn = By.id(\"login\");\n\n    public LoginPage(WebDriver driver){\n        super(driver);\n    }\n\n    public void login(String user, String pass){\n        driver.findElement(username).sendKeys(user);\n        driver.findElement(password).sendKeys(pass);\n        driver.findElement(loginBtn).click();\n    }\n}\n",
+    "truncated" : false
+  }, {
+    "path" : "src/test/java/utils/DriverManager.java",
+    "size_bytes" : 604,
+    "sha1" : "9f97d29556d97e9dd35ddab2a2796e311c343288",
+    "content" : "\npackage utils;\n\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeDriver;\nimport io.github.bonigarcia.wdm.WebDriverManager;\n\npublic class DriverManager {\n    private static WebDriver driver;\n\n    public static WebDriver getDriver(){\n        if(driver==null){\n            WebDriverManager.chromedriver().setup();\n            driver = new ChromeDriver();\n            driver.manage().window().maximize();\n        }\n        return driver;\n    }\n\n    public static void quitDriver(){\n        if(driver!=null){\n            driver.quit();\n            driver=null;\n        }\n    }\n}\n",
+    "truncated" : false
+  }, {
+    "path" : "pom.xml",
+    "size_bytes" : 1045,
+    "sha1" : "2d599100d8a4971bebb78995eaf9ccee8efbb6cf",
+    "content" : "<project xmlns=\"http://maven.apache.org/POM/4.0.0\">\n<modelVersion>4.0.0</modelVersion>\n<groupId>com.framework</groupId>\n<artifactId>selenium-cucumber</artifactId>\n<version>1.0-SNAPSHOT</version>\n    <properties>\n        <maven.compiler.source>17</maven.compiler.source>\n        <maven.compiler.target>17</maven.compiler.target>\n    </properties>\n<dependencies>\n<dependency>\n<groupId>org.seleniumhq.selenium</groupId>\n<artifactId>selenium-java</artifactId>\n<version>4.20.0</version>\n</dependency>\n\n<dependency>\n<groupId>org.testng</groupId>\n<artifactId>testng</artifactId>\n<version>7.10.2</version>\n<scope>test</scope>\n</dependency>\n\n<dependency>\n<groupId>io.cucumber</groupId>\n<artifactId>cucumber-java</artifactId>\n<version>7.15.0</version>\n</dependency>\n\n<dependency>\n<groupId>io.cucumber</groupId>\n<artifactId>cucumber-testng</artifactId>\n<version>7.15.0</version>\n</dependency>\n\n<dependency>\n<groupId>io.github.bonigarcia</groupId>\n<artifactId>webdrivermanager</artifactId>\n<version>5.6.3</version>\n</dependency>\n\n</dependencies>\n</project>\n",
+    "truncated" : false
+  } ]
+}
