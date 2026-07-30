@@ -1,0 +1,253 @@
+{
+  "schemaVersion" : "1.0",
+  "framework" : "selenium",
+  "generatedBy" : "index",
+  "entries" : [ {
+    "key" : "CheckoutPage#checkoutButton",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "checkoutButton",
+    "primary" : {
+      "kind" : "id",
+      "value" : "checkout"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "checkout"
+    } ]
+  }, {
+    "key" : "CheckoutPage#firstNameField",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "firstNameField",
+    "primary" : {
+      "kind" : "id",
+      "value" : "first-name"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "first-name"
+    } ]
+  }, {
+    "key" : "CheckoutPage#lastNameField",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "lastNameField",
+    "primary" : {
+      "kind" : "id",
+      "value" : "last-name"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "last-name"
+    } ]
+  }, {
+    "key" : "CheckoutPage#zipField",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "zipField",
+    "primary" : {
+      "kind" : "id",
+      "value" : "postal-code"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "postal-code"
+    } ]
+  }, {
+    "key" : "CheckoutPage#continueButton",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "continueButton",
+    "primary" : {
+      "kind" : "id",
+      "value" : "continue"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "continue"
+    } ]
+  }, {
+    "key" : "CheckoutPage#finishButton",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "finishButton",
+    "primary" : {
+      "kind" : "id",
+      "value" : "finish"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "finish"
+    } ]
+  }, {
+    "key" : "CheckoutPage#cancelButton",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "cancelButton",
+    "primary" : {
+      "kind" : "id",
+      "value" : "cancel"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "cancel"
+    } ]
+  }, {
+    "key" : "CheckoutPage#errorMessage",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "errorMessage",
+    "primary" : {
+      "kind" : "css",
+      "value" : "[data-test='error']"
+    },
+    "candidates" : [ {
+      "kind" : "css",
+      "value" : "[data-test='error']"
+    } ]
+  }, {
+    "key" : "CheckoutPage#successHeader",
+    "pageObject" : "src/test/java/pages/CheckoutPage.java",
+    "className" : "CheckoutPage",
+    "field" : "successHeader",
+    "primary" : {
+      "kind" : "className",
+      "value" : "complete-header"
+    },
+    "candidates" : [ {
+      "kind" : "className",
+      "value" : "complete-header"
+    } ]
+  }, {
+    "key" : "HomePage#usernameField",
+    "pageObject" : "src/test/java/pages/HomePage.java",
+    "className" : "HomePage",
+    "field" : "usernameField",
+    "primary" : {
+      "kind" : "id",
+      "value" : "user-name"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "user-name"
+    } ]
+  }, {
+    "key" : "HomePage#passwordField",
+    "pageObject" : "src/test/java/pages/HomePage.java",
+    "className" : "HomePage",
+    "field" : "passwordField",
+    "primary" : {
+      "kind" : "id",
+      "value" : "password"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "password"
+    } ]
+  }, {
+    "key" : "HomePage#loginButton",
+    "pageObject" : "src/test/java/pages/HomePage.java",
+    "className" : "HomePage",
+    "field" : "loginButton",
+    "primary" : {
+      "kind" : "id",
+      "value" : "login-button"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "login-button"
+    } ]
+  }, {
+    "key" : "HomePage#inventoryItems",
+    "pageObject" : "src/test/java/pages/HomePage.java",
+    "className" : "HomePage",
+    "field" : "inventoryItems",
+    "primary" : {
+      "kind" : "className",
+      "value" : "inventory_item"
+    },
+    "candidates" : [ {
+      "kind" : "className",
+      "value" : "inventory_item"
+    } ]
+  }, {
+    "key" : "HomePage#addToCartButtons",
+    "pageObject" : "src/test/java/pages/HomePage.java",
+    "className" : "HomePage",
+    "field" : "addToCartButtons",
+    "primary" : {
+      "kind" : "css",
+      "value" : "button[id^='add-to-cart']"
+    },
+    "candidates" : [ {
+      "kind" : "css",
+      "value" : "button[id^='add-to-cart']"
+    } ]
+  }, {
+    "key" : "HomePage#cartBadge",
+    "pageObject" : "src/test/java/pages/HomePage.java",
+    "className" : "HomePage",
+    "field" : "cartBadge",
+    "primary" : {
+      "kind" : "className",
+      "value" : "shopping_cart_badge"
+    },
+    "candidates" : [ {
+      "kind" : "className",
+      "value" : "shopping_cart_badge"
+    } ]
+  }, {
+    "key" : "LoginPage#username",
+    "pageObject" : "src/test/java/pages/LoginPage.java",
+    "className" : "LoginPage",
+    "field" : "username",
+    "primary" : {
+      "kind" : "id",
+      "value" : "username"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "username"
+    } ]
+  }, {
+    "key" : "LoginPage#password",
+    "pageObject" : "src/test/java/pages/LoginPage.java",
+    "className" : "LoginPage",
+    "field" : "password",
+    "primary" : {
+      "kind" : "id",
+      "value" : "password"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "password"
+    } ]
+  }, {
+    "key" : "LoginPage#loginBtn",
+    "pageObject" : "src/test/java/pages/LoginPage.java",
+    "className" : "LoginPage",
+    "field" : "loginBtn",
+    "primary" : {
+      "kind" : "css",
+      "value" : "button[type='submit']"
+    },
+    "candidates" : [ {
+      "kind" : "css",
+      "value" : "button[type='submit']"
+    } ]
+  }, {
+    "key" : "LoginPage#flashMessage",
+    "pageObject" : "src/test/java/pages/LoginPage.java",
+    "className" : "LoginPage",
+    "field" : "flashMessage",
+    "primary" : {
+      "kind" : "id",
+      "value" : "flash"
+    },
+    "candidates" : [ {
+      "kind" : "id",
+      "value" : "flash"
+    } ]
+  } ]
+}
