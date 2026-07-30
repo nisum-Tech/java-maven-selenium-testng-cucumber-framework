@@ -1,0 +1,218 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.framework:selenium-cucumber >-------------------
+[INFO] Building selenium-cucumber 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ selenium-cucumber ---
+[INFO] skip non existing resourceDirectory /tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ selenium-cucumber ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ selenium-cucumber ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ selenium-cucumber ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 11 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ selenium-cucumber ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+Scenario: Successful checkout with valid details # src/test/resources/features/checkout.feature:6
+Jul 30, 2026 12:46:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:46:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user has items in cart                   # stepdefinitions.CheckoutSteps.userHasItemsInCart()
+  When user proceeds to checkout                 # stepdefinitions.CheckoutSteps.userProceedsToCheckout()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: first-name (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36981}, goog:processID: 1516, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36981/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cbc1dc34834336f88c8c269f71f0b3f0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.CheckoutPage.proceedToCheckout(CheckoutPage.java:45)
+	at stepdefinitions.CheckoutSteps.userProceedsToCheckout(CheckoutSteps.java:20)
+	at ✽.user proceeds to checkout(file:///tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/test/resources/features/checkout.feature:7)
+
+  And enters valid shipping details              # stepdefinitions.CheckoutSteps.entersValidShippingDetails()
+  And confirms payment                           # stepdefinitions.CheckoutSteps.confirmsPayment()
+  Then order should be placed successfully       # stepdefinitions.CheckoutSteps.orderShouldBePlacedSuccessfully()
+
+Scenario: Checkout without shipping details # src/test/resources/features/checkout.feature:12
+Jul 30, 2026 12:46:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:46:57 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user has items in cart              # stepdefinitions.CheckoutSteps.userHasItemsInCart()
+  When user proceeds to checkout            # stepdefinitions.CheckoutSteps.userProceedsToCheckout()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: first-name (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33877}, goog:processID: 1639, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:33877/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05b23b56401af768180e52946a176ffb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.CheckoutPage.proceedToCheckout(CheckoutPage.java:45)
+	at stepdefinitions.CheckoutSteps.userProceedsToCheckout(CheckoutSteps.java:20)
+	at ✽.user proceeds to checkout(file:///tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/test/resources/features/checkout.feature:13)
+
+  And leaves shipping details empty         # stepdefinitions.CheckoutSteps.leavesShippingDetailsEmpty()
+  Then validation errors should be shown    # stepdefinitions.CheckoutSteps.validationErrorsShouldBeShown()
+
+Scenario: Cancel checkout process             # src/test/resources/features/checkout.feature:17
+Jul 30, 2026 12:47:09 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:47:09 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user has items in cart                # stepdefinitions.CheckoutSteps.userHasItemsInCart()
+  When user opens checkout page               # stepdefinitions.CheckoutSteps.userOpensCheckoutPage()
+  And clicks cancel button                    # stepdefinitions.CheckoutSteps.clicksCancelButton()
+  Then user should be redirected to cart page # stepdefinitions.CheckoutSteps.userShouldBeRedirectedToCartPage()
+
+Scenario: Verify products are displayed on home page # src/test/resources/features/home.feature:3
+Jul 30, 2026 12:47:10 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:47:10 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user is logged in                            # stepdefinitions.HomeSteps.userIsLoggedIn()
+  When user lands on home page                       # stepdefinitions.HomeSteps.userLandsOnHomePage()
+  Then product list should be visible                # stepdefinitions.HomeSteps.productListShouldBeVisible()
+
+Scenario: Search product                           # src/test/resources/features/home.feature:8
+Jul 30, 2026 12:47:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:47:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user is on home page                       # stepdefinitions.HomeSteps.userIsOnHomePage()
+  When user searches for "iPhone"                  # stepdefinitions.HomeSteps.userSearchesFor(java.lang.String)
+  Then relevant search results should be displayed # stepdefinitions.HomeSteps.relevantSearchResultsShouldBeDisplayed()
+
+Scenario: Add product to cart from home page # src/test/resources/features/home.feature:13
+Jul 30, 2026 12:47:12 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:47:12 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user is on home page                 # stepdefinitions.HomeSteps.userIsOnHomePage()
+  When user adds first product to cart       # stepdefinitions.HomeSteps.userAddsFirstProductToCart()
+  Then product should be added successfully  # stepdefinitions.HomeSteps.productShouldBeAddedSuccessfully()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: shopping_cart_badge (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36395}, goog:processID: 2123, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36395/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d26804a35bc8d3869dcee10e4c807bd6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.HomePage.isProductAddedToCart(HomePage.java:64)
+	at stepdefinitions.HomeSteps.productShouldBeAddedSuccessfully(HomeSteps.java:50)
+	at ✽.product should be added successfully(file:///tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/test/resources/features/home.feature:16)
+
+
+Scenario: Valid login                 # src/test/resources/features/login.feature:4
+Jul 30, 2026 12:47:33 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 151
+Jul 30, 2026 12:47:33 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 151.0.7922.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given user is on login page         # stepdefinitions.LoginSteps.openLogin()
+  When user logs in                   # stepdefinitions.LoginSteps.loginUser()
+  Then user should login successfully # stepdefinitions.LoginSteps.verify()
+[ERROR] Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 50.22 s <<< FAILURE! -- in TestSuite
+[ERROR] runners.TestRunner.runScenario["Successful checkout with valid details", "Checkout Process"](1) -- Time elapsed: 12.19 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.id: first-name (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36981}, goog:processID: 1516, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36981/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cbc1dc34834336f88c8c269f71f0b3f0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.CheckoutPage.proceedToCheckout(CheckoutPage.java:45)
+	at stepdefinitions.CheckoutSteps.userProceedsToCheckout(CheckoutSteps.java:20)
+	at ✽.user proceeds to checkout(file:///tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/test/resources/features/checkout.feature:7)
+
+[ERROR] runners.TestRunner.runScenario["Checkout without shipping details", "Checkout Process"](2) -- Time elapsed: 11.44 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.id: first-name (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33877}, goog:processID: 1639, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:33877/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05b23b56401af768180e52946a176ffb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.CheckoutPage.proceedToCheckout(CheckoutPage.java:45)
+	at stepdefinitions.CheckoutSteps.userProceedsToCheckout(CheckoutSteps.java:20)
+	at ✽.user proceeds to checkout(file:///tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/test/resources/features/checkout.feature:13)
+
+[ERROR] runners.TestRunner.runScenario["Add product to cart from home page", "Home Page Functionality"](6) -- Time elapsed: 21.02 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.className: shopping_cart_badge (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36395}, goog:processID: 2123, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36395/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d26804a35bc8d3869dcee10e4c807bd6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.HomePage.isProductAddedToCart(HomePage.java:64)
+	at stepdefinitions.HomeSteps.productShouldBeAddedSuccessfully(HomeSteps.java:50)
+	at ✽.product should be added successfully(file:///tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/src/test/resources/features/home.feature:16)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestRunner.runScenario » Timeout Expected condition failed: waiting for visibility of element located by By.className: shopping_cart_badge (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36395}, goog:processID: 2123, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36395/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d26804a35bc8d3869dcee10e4c807bd6
+[ERROR]   TestRunner.runScenario » Timeout Expected condition failed: waiting for visibility of element located by By.id: first-name (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33877}, goog:processID: 1639, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:33877/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05b23b56401af768180e52946a176ffb
+[ERROR]   TestRunner.runScenario » Timeout Expected condition failed: waiting for visibility of element located by By.id: first-name (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.9.12', java.version: '17.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.71, chrome: {chromedriverVersion: 151.0.7922.71 (ef35003457e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36981}, goog:processID: 1516, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36981/devtoo..., se:cdpVersion: 151.0.7922.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cbc1dc34834336f88c8c269f71f0b3f0
+[INFO] 
+[ERROR] Tests run: 7, Failures: 3, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  52.941 s
+[INFO] Finished at: 2026-07-30T00:47:35Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project selenium-cucumber: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /tmp/qbric-codegen/exec-6e3fc2dfbbe34c52b09423adf09aca98-heal/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

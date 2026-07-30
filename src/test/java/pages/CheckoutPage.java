@@ -42,10 +42,14 @@ public class CheckoutPage extends BasePage {
 
     public void proceedToCheckout() {
         wait.until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+        wait.until(ExpectedConditions.urlContains("checkout-step-one"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField));
     }
 
     public void openCheckoutPage() {
         wait.until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+        wait.until(ExpectedConditions.urlContains("checkout-step-one"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField));
     }
 
     public void enterValidShippingDetails() {
